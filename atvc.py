@@ -14,6 +14,7 @@ from matplotlib.colors import LogNorm
 
 # Load the NYC Street Centerline (CSCL) dataset
 cscl = gpd.read_file(r"C:\Users\Chen\Downloads\NYC Street Centerline (CSCL)_20250223.geojson")
+cscl = cscl[cscl['rw_type'] != '14']
 print(f"CSCL: {cscl.columns}")
 
 # Load the New York City Borough Boundaries (NYBB) dataset
